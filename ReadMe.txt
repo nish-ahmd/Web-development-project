@@ -1,8 +1,10 @@
-Requirements
+<<--Requirements-->>
 you need to install
  1.create-react-app
  2.axios
  3.react-router-dom
+ 4.node-modules folder is not in this repository so you'll have to create a react project and copy these files into it after installing the modules above
+ 5.If the instructions stated in 4. above doesnt't work let me know ASAP
 -----------------------
 <<Status>>
 > All pages are made using reactjs and styling done using javascript
