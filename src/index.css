@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+}
+
+button {
+    background-color: purple;
+    color: white;
+    width: 100px;
+    border-radius: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    border: 1px solid black;
+}
+
+button::click {
+    border: 1px solid black;
+}
+
+.front {
+    margin: auto;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.buttonContainer {
+    display: flex;
+    align-self: center;
+    padding-left: 400px;
+}
