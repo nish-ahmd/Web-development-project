@@ -7,6 +7,7 @@ import './teachSign.css'
 const TeachSign = () => {
     const history = useHistory();
     const ClickTeachForm =() => history.push('/TeachForm');
+    const ClickTeachPage = () => history.push('/TeachPage');
 
     const styles = {
         header: {
@@ -37,7 +38,7 @@ const TeachSign = () => {
                 <form className="loginbox">
                     <input placeholder="Username" type="text" id="username" required></input>
                     <input placeholder="Password" type="password" id="password" required></input>
-                <button id="submit">Login</button><br/><br/>
+                <button id="submit" onClick={ClickTeachPage}>Login</button><br/><br/>
                 <p>Are you a new member?</p><br/>
                 <button id="sign" onClick={ClickTeachForm}>Sign in</button><br/>
                 </form>

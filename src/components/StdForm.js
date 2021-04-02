@@ -47,8 +47,8 @@ export const StdForm = () => {
                 <section className="form animated flipInX">
                 <h2>Sign up as a student</h2>
                 <form className="loginbox" onSubmit={submitForm}>
-                    <input placeholder="Username" type="text" id="username" onChange={e=>setValue({uname:e.target.values})} required></input>
-                    <input placeholder="Password" type="password" id="password" onChange={e=>setValue({password:e.target.values})} required></input>
+                    <input placeholder="Username" type="text" id="username" required onChange={e=>setValue({uname:e.target.values})}></input>
+                    <input placeholder="Password" type="password" id="password" required onChange={e=>setValue({password:e.target.values})}></input>
                 <button id="sign">Sign up</button><br/>
                 </form>
                 </section>

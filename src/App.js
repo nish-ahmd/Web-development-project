@@ -5,6 +5,8 @@ import StdSign from './components/StdSign'
 import StdForm from './components/StdForm'
 import TeachForm from './components/TeachForm'
 import StdSelect from './components/StdSelect'
+import TeachPage from './components/TeachPage'
+import StudentPage from './components/StudentPage'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
       <Route path ="/StdForm" component={StdForm}/>
       <Route path="/teachForm" component={TeachForm}/>
       <Route path="/StdSelect" component={StdSelect}/>
+      <Route path="/TeachPage" component={TeachPage}/>
+      <Route path="/StudentPage" component={StudentPage}/>
     </Router>
   );
 }
