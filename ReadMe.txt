@@ -4,7 +4,7 @@ you need to install
  2.axios
  3.react-router-dom
 -----------------------
-<<Status>>
+<<--Status-->>
 > All pages are made using reactjs and styling done using javascript
 
 > I have not implemented form validation and there are issues with databinding
@@ -15,17 +15,12 @@ you need to install
   These links can be replaced with links to localhost server when implementing sql or
   preferrably mongo db.
 
-> Still have to create the page which displays the links to lectures from student account 
-  and the page that displays and lets teachers upload new links
-
 ------------------------------------------------------------------------------------------
 <<--What needs doing?-->>
 
 > implement form validation and databinding
 
 > Make changes to styles
-
-> Create the final pages written in 'status' section
 
 > i have commented on other changes to be made within the source code
 
