@@ -12,6 +12,11 @@ router.post('/signup',(request,response)=>{
         password : request.body.password 
     })
 
+    var bodyParser = require("body-parser");
+
+    router.use(bodyParser.json());
+    router.use(bodyParser.urlencoded({ extended: true }));
+
     signedUpUser.save()
     .then(data=>{
             response.json(data)

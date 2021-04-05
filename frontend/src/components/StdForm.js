@@ -10,7 +10,7 @@ export const StdForm = () => {
 
     const [username,setUsername] = useState('')
     const [password,setPassword] = useState('')
-    const [fullname,setFullname] = useState('')
+    const [fullName,setFullname] = useState('')
     const [batches,setBatches] = useState('')
     const [stream,setStream] = useState('')
 
@@ -54,20 +54,21 @@ export const StdForm = () => {
     const submitForm = e => {
         e.preventDefault();
        const newstd ={
-            fullname:fullname,
-            batch:batches,
+            fullName:fullName,
             stream:stream,
+            batch:batches,
             username:username,
             password:password
         }
       
 
-        axios.post(' http://localhost:4005/app/signup',{newstd})
+        axios.post(' http://localhost:4005/app/signup',newstd)
         .then(function(response){
             console.log(response);
+            console.log(newstd);
+
             history.push('/stdSign');
         }) 
-        console.log(newstd);
 
         alert('A name was submitted: ');
     }
@@ -95,13 +96,13 @@ export const StdForm = () => {
                 <section className="form animated flipInX">
                 <h2>Sign up as a student</h2>
                 <form className="loginbox" onSubmit={submitForm}>
-                     <input placeholder="Fullname" type="text" id="Fullname" value={fullname} required onChange={e=> setFullname(e.target.value)}></input>
-                     <select name="subject1" id="subject1" onChange={e=>setStream(e.target.value)}>
+                     <input placeholder="Fullname" type="text" id="Fullname" value={fullName} required onChange={e=> setFullname(e.target.value)}></input>
+                     <select name="subject1" id="subject1" onChange={e=>setStream(e.target.value)} value={stream}>
                         {subs.map((subs)=>(
                             <option key={Math.random().toString(36).substr(2,9)} value={subs.value}>{subs.label} </option>
                         ))}
                     </select><br/>
-                     <select name="subject" id="subject" onChange={e=>setBatches(e.target.value)}>
+                     <select name="subject" id="subject" onChange={e=>setBatches(e.target.value)} value={batches}>
                         {batch.map((batch)=>(
                             <option key={Math.random().toString(36).substr(2,9)} value={batch.value}>{batch.label}</option>
                         ))}
