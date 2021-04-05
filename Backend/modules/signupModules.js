@@ -3,30 +3,30 @@ const mongoose = require('mongoose')
 const signUpTemplate = new mongoose.Schema ({
     fullName : {
         type: String,
-        required : true
+        required : false
 
     },
    stream : {
         type: String,
-        required : true
+        required : false
 
     },
     batch : {
         type: String,
-        required : true
+        required : false
 
     },
 
     username : {
         type: String,
-        required : true
+        required : false
 
     },
 
 
     password : {
         type: String,
-        required : true
+        required : false
 
     },
     
