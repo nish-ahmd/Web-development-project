@@ -4,6 +4,7 @@ Content-Type: application/json
 {
     "fullName": "Nishad",
     "username": "nish",
-    "email" : "nish@gmail.com",
+    "stream" : "nish@gmail.com",
+    "batch" : "new",
     "password" : "Basin@123"
 }

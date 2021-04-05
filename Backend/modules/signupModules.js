@@ -6,7 +6,7 @@ const signUpTemplate = new mongoose.Schema ({
         required : true
 
     },
-    stream : {
+   stream : {
         type: String,
         required : true
 
