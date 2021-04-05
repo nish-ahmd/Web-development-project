@@ -8,6 +8,18 @@ import './studentSign.css'
 export const StdForm = () => {
     const history = useHistory();
 
+    const [username,setUsername] = useState('')
+    const [password,setPassword] = useState('')
+    const [fullname,setFullname] = useState('')
+    const [batches,setBatches] = useState('')
+    const [stream,setStream] = useState('')
+
+
+
+
+  
+
+
     const styles = {
         header: {
           backgroundImage: `url(${background})`,
@@ -23,19 +35,41 @@ export const StdForm = () => {
           backgroundColor: 'rgba(255, 255, 255, 0.3)',
         }
     }
+    /*function handleChanges(event){
+        const{name,value} =  event.target;
 
-    const [values,setValue] = useState({username:'',password:''});
+        setValue(prevValues =>{
+            return{
+                ...prevValues,
+                [name] : value
+            }
+        })
+    }*/
+
+
+
+    //const [values,setValue] = useState({username:'',password:'',fullname:'',stream:'',batch:''});
 
     //This is the function to submit data to the database
     const submitForm = e => {
         e.preventDefault();
-        alert('A name was submitted: ');
+       const newstd ={
+            fullname:fullname,
+            batch:batches,
+            stream:stream,
+            username:username,
+            password:password
+        }
+      
 
-        axios.post(' http://localhost:4005/app/signup',{values})
+        axios.post(' http://localhost:4005/app/signup',{newstd})
         .then(function(response){
             console.log(response);
             history.push('/stdSign');
-        })
+        }) 
+        console.log(newstd);
+
+        alert('A name was submitted: ');
     }
 
     const [subs] = useState([
@@ -61,19 +95,19 @@ export const StdForm = () => {
                 <section className="form animated flipInX">
                 <h2>Sign up as a student</h2>
                 <form className="loginbox" onSubmit={submitForm}>
-                     <input placeholder="Fullname" type="text" id="Fullname" required onChange={e=>setValue({uname:e.target.values})}></input>
-                     <select name="subject" id="subject">
+                     <input placeholder="Fullname" type="text" id="Fullname" value={fullname} required onChange={e=> setFullname(e.target.value)}></input>
+                     <select name="subject1" id="subject1" onChange={e=>setStream(e.target.value)}>
                         {subs.map((subs)=>(
-                            <option key={Math.random().toString(36).substr(2,9)} value={subs.value}>{subs.label}</option>
+                            <option key={Math.random().toString(36).substr(2,9)} value={subs.value}>{subs.label} </option>
                         ))}
                     </select><br/>
-                     <select name="subject" id="subject">
+                     <select name="subject" id="subject" onChange={e=>setBatches(e.target.value)}>
                         {batch.map((batch)=>(
                             <option key={Math.random().toString(36).substr(2,9)} value={batch.value}>{batch.label}</option>
                         ))}
                     </select><br/>
-                    <input placeholder="Username" type="text" id="username" required onChange={e=>setValue({uname:e.target.values})}></input>
-                    <input placeholder="Password" type="password" id="password" required onChange={e=>setValue({password:e.target.values})}></input>
+                    <input placeholder="Username" type="text" id="username" value={username} required onChange={e => setUsername(e.target.value)}></input>
+                    <input placeholder="Password" type="password" id="password" value={password} required onChange={e=> setPassword(e.target.value)}></input>
                 <button id="sign" onClick={submitForm} >Sign up</button><br/>
                 </form>
                 </section>
