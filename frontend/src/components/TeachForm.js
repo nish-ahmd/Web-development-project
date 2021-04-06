@@ -8,6 +8,12 @@ import './teachSign.css'
 export const TeachForm = () => {
     const history = useHistory();
 
+    const [username,setUsername] = useState('')
+    const [password,setPassword] = useState('')
+    const [fullName,setFullname] = useState('')
+    const [school,setSchool] = useState('')
+    const [stream,setStream] = useState('')
+
     const styles = {
         header: {
           backgroundImage: `url(${background})`,
@@ -32,20 +38,32 @@ export const TeachForm = () => {
         {id:"4",label:"it", value:"it"}
     ]);
 
-    const [values] = useState({uname:'',password:'',subject:''});
     
     /*Note! i did not use the button component i defined here as styling for this button 
     was already in the form template i used*/ 
 
     //This function submits an http request and then sends the user back to the login page
-    //no databinding is done so even though an http request is made no data is sent to the server
+    //no databinding is done so even though an http request is made no datdrfbdfhda is sent to the server
     const submitForm = e => {
         e.preventDefault();
-        axios.post('https://run.mocky.io/v3/7a060cf1-0d9d-41c0-8e98-5fd532b99c43',{values})
+       const newstd ={
+            fullName:fullName,
+            stream:stream,
+            school:school,
+            username:username,
+            password:password
+        }
+      
+
+        axios.post(' http://localhost:4005/app/signupteach',newstd)
         .then(function(response){
             console.log(response);
-            history.push('/teachSign');
-        })
+            console.log(newstd);
+
+            history.push('/stdSign');
+        }) 
+
+        alert('A name was submitted: ');
     }
 
     return ( 
@@ -55,10 +73,10 @@ export const TeachForm = () => {
                 <h2>Sign up as a Teacher</h2>
                 <form className="loginbox" onSubmit={submitForm}>
                     
-                    <input placeholder="Name" type="text" id="username" required></input>
-                    <input placeholder="School" type="text" id="username" required></input>
-                    <input placeholder="Username" type="text" id="username" required></input>
-                    <input placeholder="Password" type="password" id="password" name="password" required></input>
+                    <input placeholder="Name" type="text" id="useername" required  value={fullName}  onChange={e => setFullname(e.target.value)}></input>
+                    <input placeholder="School" type="text" id="username" required  value={school}  onChange={e => setSchool(e.target.value)}></input>
+                    <input placeholder="Username" type="text" id="username" required value={username} onChange={e=> setUsername(e.target.value)} ></input>
+                    <input placeholder="Password" type="password" id="password" name="password" required value={password} onChange={e=> setPassword(e.target.value)}></input>
                     <label>I'm teaching:</label>
                     <br/>
                     <select name="subject" id="subject">
@@ -67,7 +85,7 @@ export const TeachForm = () => {
                         ))}
                     </select><br/>
 
-                <button id="sign" type="submit" >Sign up</button><br/>
+                <button id="sign" type="submit" onClick={submitForm}  >Sign up</button><br/>
                 </form>
                 </section>
             </div>
