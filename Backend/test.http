@@ -1,10 +1,8 @@
-POST http://localhost:4005/app/signupteach
+GET  http://localhost:4005/getzoom
 Content-Type: application/json
 
 {
-    "fullName": "Nishad",
-    "username": "nish",
-    "stream" : "nish@gmail.com",
-    "batch" : "new",
-    "password" : "Basin@123"
+    "title": "Nishad",
+    "link": "nish",
+    "description" : "nish@gmail.com"
 }
