@@ -7,11 +7,23 @@ const routesUrls = require('./routes/routes')
 const cors = require('cors')
 
 dotenv.config()
-mongoose.connect(process.env.dataBase_access, ()=>console.log("Database Connected"))
+mongoose.connect(process.env.dataBase_access,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+        useCreateIndex: true
+    }, 
+    ()=>console.log("Database Connected"))
 
 
 app.use(express.json())
-app.use(cors())
+app.use(
+    cors({
+        origin: ["http://localhost:3000"],
+        credentials: true,
+    })
+);
 app.use('/app', routesUrls)
 
-app.listen(4007, async function () { console.log('Serever is up'); });
+app.listen(4010, async function () { console.log('Serever is up'); });
