@@ -30,7 +30,7 @@ const StdSelect = () => {
 
       //function retrievs teacher information from database
       const retrieveData = () =>{
-          axios.get('https://run.mocky.io/v3/3fcea369-39a8-4244-ab80-3c5444dc8a53')
+          axios.get('http://localhost:4005/app/teachzoom/')
           .then((response)=>{
               const allData = response.data;
               getdata(allData);
@@ -66,3 +66,6 @@ const StdSelect = () => {
 
 export default StdSelect
 
+//sfasfasfafs//
+
+//sfsafasdfsdfdsfsdf
