@@ -1,10 +1,8 @@
-POST http://localhost:4005/app/signup
+POST   http://localhost:4005/app/teachzoom
 Content-Type: application/json
 
 {
-    "fullName": "Nishad",
-    "username": "nish",
-    "stream" : "nish@gmail.com",
-    "batch" : "new",
-    "password" : "Basin@123"
+    "title": "Nishad",
+    "link": "nish",
+    "description" : "nish@gmail.com"
 }
