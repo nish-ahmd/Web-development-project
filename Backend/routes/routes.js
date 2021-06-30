@@ -1,5 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const cors = require('cors')
+
 
 const signUpTemplateCopy = require ('../modules/signUpModules')
 const signUpteachTemplateCopy = require ('../modules/signupteachModule')
@@ -77,7 +79,7 @@ router.post('/teachzoom',(request,response)=>{
     })
 })
 
-router.get('/',async (request,response)=>{
+router.get('/',cors(),async (request,response)=>{
     await zoomTemplateCopy.find()
     //var bodyParser = require("body-parser");
 

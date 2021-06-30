@@ -1,4 +1,4 @@
-GET  http://localhost:4005/getzoom
+POST   http://localhost:4005/app/teachzoom
 Content-Type: application/json
 
 {
