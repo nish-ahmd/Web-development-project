@@ -1,9 +1,11 @@
 import background from './images/background.jpg'
 import './teachSign.css'
+import { useHistory } from 'react-router-dom';
 import React, { useState,useEffect } from 'react'
 import axios from 'axios'
 
 const TeachPage = () => {
+    const history = useHistory();
 
     const styles = {
         header: {
@@ -21,30 +23,58 @@ const TeachPage = () => {
         }
       }
 
-      const [data,getdata] = useState(['']);
+      const [title,setTitle] = useState('')
+      const [link,setLink] = useState('')
+      const [description,setDescription] = useState('')
+      const [data,getData] = useState([''])
+
+
+
+      const submitForm = e => {
+        e.preventDefault();
+       const newstd ={
+            title:title,
+            link:link,
+            description:description
+            
+        }
+      
+
+        axios.post(' http://localhost:4005/app/teachzoom',newstd)
+        .then(function(response){
+            console.log(response);
+            console.log(newstd);
+
+            history.push('/stdSign');
+        }) 
+
+        alert('A name was submitted: ');
+    }
+
 
       useEffect(()=>{
-        retrieveData();
-        },[]);
+        
+       retrieveData(); },[]);
 
-        const sendData = (value) =>{
+        /*const sendData = (value) =>{
             axios.post('https://run.mocky.io/v3/7a060cf1-0d9d-41c0-8e98-5fd532b99c43',{value})
             .then((response) =>{
                 console.log(response.data);
                 console.log('data sent');
                 console.log('reloading page');
             })
-        }  
+        }  */
 
       const retrieveData = () =>{
-        axios.get('https://run.mocky.io/v3/4a75c441-a60a-40f8-a87c-5e64cf8162c0')
+        axios.get(' http://localhost:4005/app/teachzoom/')
         .then((response)=>{
-            const allData = response.data;
-            getdata(allData);
+            console.log("axios res",response)
+             getData (response.data)
+            //getdata(allData);
 
         })
         .catch(error => console.log(`error:${error}`));
-    }
+    } 
 
     return (
         <div style={styles.header}>
@@ -52,10 +82,10 @@ const TeachPage = () => {
             <div className="linkSlider">
             { 
                 data.map((links) => (
-                    <div className="slot" key={links.id}>
-                        <h3>Topic: {links.title}</h3><br/>
+                    <div className="slot" key={data.id}>
+                        <h3>Topic: {data.title}</h3><br/>
                         <a href={links.link}>{links.link}</a><br/><br/>
-                        <p>{links.description}</p>
+                        <p>{data.description}</p>
                     </div>
                     )
                 )
@@ -70,12 +100,12 @@ const TeachPage = () => {
                     <p className="valid">Valid. Please wait a moment.</p>
                     <p className="error">Error. Please enter correct Username &amp; password.</p>
                     <form className="loginbox">
-                        <input placeholder="Title" type="text" id="title"s></input>
-                        <input placeholder="Paste Link Here" type="text" id="link"></input>
-                        <textarea id="desc" name="desc" rows="4" cols="50">
+                        <input placeholder="Title" type="text" id="title" value={title} required onChange={e => setTitle(e.target.value)}></input>
+                        <input placeholder="Paste Link Here" type="text" id="link" value={link} onChange={e=>setLink(e.target.value)}></input>
+                        <textarea id="desc" name="desc" rows="4" cols="50" value={description} onChange={e=>setDescription(e.target.value)}>
                         Description goes here.
                         </textarea>
-                        <button id="post" onClick={()=>sendData(data)}>post</button><br/>
+                        <button id="post" onClick={submitForm}>post</button><br/>
                     </form>
                 </section>
             </div>

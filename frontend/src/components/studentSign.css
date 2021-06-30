@@ -50,7 +50,7 @@ textarea {
     margin: 0 0 20px;
     padding: 10px 15px;
     border: 1px solid #ccc;
-    color: #ccc;
+    color: rgb(0, 0, 0);
     font-family: "Roboto";
     box-sizing: border-box;
     font-size: 14px;
@@ -155,4 +155,8 @@ textarea {
     margin: -140px 0 0 -182px;
     padding: 40px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.hire {
+    color: #ccc;
 }
