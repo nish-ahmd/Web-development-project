@@ -8,7 +8,7 @@ import './studentSign.css'
 export const StdForm = () => {
     const history = useHistory();
 
-    const [usernname,setUsername] = useState('')
+    const [username,setUsername] = useState('')
     const [password,setPassword] = useState('')
     const [fullName,setFullname] = useState('')
     const [batches,setBatches] = useState('')
