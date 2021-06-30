@@ -1,158 +1,158 @@
-    .form {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background: #fff;
-        width: 285px;
-        margin: -140px 0 0 -182px;
-        padding: 40px;
-        border-radius: 40px;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    }
-    
-    h2 {
-        margin: 0 0 20px;
-        color: purple;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 22px;
-        font-weight: 400;
-    }
-    
-    label {
-        color: black;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        font-weight: 200;
-    }
-    
-    select {
-        outline: none;
-        display: block;
-        color: black;
-        width: 100%;
-        margin: 0 0 20px;
-        padding: 10px 15px;
-        border: 1px solid #ccc;
-        font-family: Arial, Helvetica, sans-serif;
-        box-sizing: border-box;
-        font-size: 14px;
-        font-weight: 400;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        transition: 0.2s linear;
-    }
-    
-    input,
-    textarea {
-        outline: none;
-        display: block;
-        width: 100%;
-        margin: 0 0 20px;
-        padding: 10px 15px;
-        border: 1px solid #ccc;
-        color: rgb(14, 1, 1);
-        font-family: "Roboto";
-        box-sizing: border-box;
-        font-size: 14px;
-        font-weight: 400;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        transition: 0.2s linear;
-    }
-    
-    #submit {
-        cursor: pointer;
-        background: purple;
-        width: 100%;
-        padding: 10px 15px;
-        border: 0;
-        color: #fff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 22px;
-        font-weight: 400;
-    }
-    
-    #sign {
-        cursor: pointer;
-        background: rgb(88, 88, 255);
-        width: 100%;
-        padding: 10px 15px;
-        border: 0;
-        color: #fff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 22px;
-        font-weight: 400;
-    }
-    
-    #post {
-        cursor: pointer;
-        background: rgb(88, 88, 255);
-        width: 40%;
-        position: relative;
-        left: 30%;
-        padding: 10px 15px;
-        border: 0;
-        color: #fff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 22px;
-        font-weight: 400;
-    }
-    
-    .error,
-    .valid {
-        display: none;
-    }
-    
-    .card {
-        color: purple;
-        margin: auto;
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        top: 100px;
-        position: relative;
-        padding: 10px;
-        margin: 50px;
-        position: relative;
-        width: 300px;
-        height: 200px;
-        border-radius: 20px;
-        background-color: white;
-        transition: all .4s;
-    }
-    
-    .card:hover {
-        transform: translateY(-10px) scale(1.1);
-    }
-    
-    .linkSlider {
-        width: 60%;
-        height: 100vh;
-        margin: auto;
-        background-color: white;
-        position: relative;
-        top: 70px;
-        padding: 0px 0 40px 0;
-        align-self: center;
-        text-align: center;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    }
-    
-    .slot {
-        border: 2px solid black;
-        text-align: left;
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 20px;
-    }
-    
-    .postForm {
-        width: 55%;
-        margin: auto;
-        align-self: center;
-        position: fixed;
-        bottom: 10px;
-        left: 32%;
-        background: purple;
-        margin: -140px 0 0 -182px;
-        padding: 40px;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    }
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: 285px;
+  margin: -140px 0 0 -182px;
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  margin: 0 0 20px;
+  color: purple;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+label {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+select {
+  outline: none;
+  display: block;
+  color: black;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.2s linear;
+}
+
+input,
+textarea {
+  outline: none;
+  display: block;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  color: rgb(175, 57, 57);
+  font-family: "Roboto";
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.2s linear;
+}
+
+#submit {
+  cursor: pointer;
+  background: purple;
+  width: 100%;
+  padding: 10px 15px;
+  border: 0;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+#sign {
+  cursor: pointer;
+  background: rgb(88, 88, 255);
+  width: 100%;
+  padding: 10px 15px;
+  border: 0;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+#post {
+  cursor: pointer;
+  background: rgb(88, 88, 255);
+  width: 40%;
+  position: relative;
+  left: 30%;
+  padding: 10px 15px;
+  border: 0;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.error,
+.valid {
+  display: none;
+}
+
+.card {
+  color: purple;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 100px;
+  position: relative;
+  padding: 10px;
+  margin: 50px;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: white;
+  transition: all 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
+.linkSlider {
+  width: 60%;
+  height: 100vh;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  top: 70px;
+  padding: 0px 0 40px 0;
+  align-self: center;
+  text-align: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.slot {
+  border: 2px solid black;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+.postForm {
+  width: 55%;
+  margin: auto;
+  align-self: center;
+  position: fixed;
+  bottom: 10px;
+  left: 32%;
+  background: purple;
+  margin: -140px 0 0 -182px;
+  padding: 40px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
