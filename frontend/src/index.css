@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    font-family: sans-serif;
 }
 
 button {
@@ -12,8 +13,12 @@ button {
     border: 1px solid black;
 }
 
+button:hover {
+    background-color: blueviolet;
+}
+
 button::click {
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .front {
