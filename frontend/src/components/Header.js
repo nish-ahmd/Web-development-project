@@ -11,17 +11,14 @@ const Header = (props) => {
 
     const styles = {
         header: {
+        
+        
           backgroundImage: `url(${background})`,
           height: '100vh',
+          width:'100%',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover'
-        },
-      
-        content: {
-          height: '100%',
-          width: '100%',
-          backgroundColor: 'rgba(255, 255, 255, 0.3)',
         }
       }
 
@@ -33,10 +30,10 @@ const Header = (props) => {
             <h1 style = {{color:props.color, fontSize: props.fontSize, fontFamily:props.fontFamily}}>Welcome to CWC</h1>
             <h3 style={{fontFamily:'Arial'}}>ONLINE LEARNING PLATFORM</h3><br/><br/>
             <h1 style = {{color:'black', fontFamily:'Arial', fontSize:'50px'}}>LOGIN AS A</h1><br/><br/>
-            <div className="buttonContainer">
+            
                 <Button onClick={ClickStudent} text="Student" width="300px"  height="50px"/>
                 <Button onClick={ClickTeacher} text="Teacher" width="300px" height="50px"/>
-            </div>
+           
         </div>
             </div>
         </div>
