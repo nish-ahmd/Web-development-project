@@ -60,6 +60,39 @@ const StdSelect = () => {
                     )
                 )
             }
+            { 
+                data.map((teacher) => (
+                    <div className="card" key={teacher.id}>
+                        <h2>{teacher.name}</h2>
+                        <h4>{teacher.subject}</h4>
+                        <span>{teacher.description}</span><br/><br/>
+                        <Button text="View" width="120px"  height="50px" onClick={()=>sendData(teacher.name)}/>
+                    </div>
+                    )
+                )
+            }
+            { 
+                data.map((teacher) => (
+                    <div className="card" key={teacher.id}>
+                        <h2>{teacher.name}</h2>
+                        <h4>{teacher.subject}</h4>
+                        <span>{teacher.description}</span><br/><br/>
+                        <Button text="View" width="120px"  height="50px" onClick={()=>sendData(teacher.name)}/>
+                    </div>
+                    )
+                )
+            }
+            { 
+                data.map((teacher) => (
+                    <div className="card" key={teacher.id}>
+                        <h2>{teacher.name}</h2>
+                        <h4>{teacher.subject}</h4>
+                        <span>{teacher.description}</span><br/><br/>
+                        <Button text="View" width="120px"  height="50px" onClick={()=>sendData(teacher.name)}/>
+                    </div>
+                    )
+                )
+            }
         </div>
     )
 }
