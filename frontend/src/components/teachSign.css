@@ -21,6 +21,8 @@ h2 {
 #lectures-title {
     margin: auto;
     text-align: center;
+    padding: 70px 0px 0px 0px;
+    font-size: 80px;
 }
 
 label {
