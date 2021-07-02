@@ -78,7 +78,7 @@ const TeachPage = () => {
 
     return (
         <div style={styles.header}>
-            <h2>Your Lectures</h2>
+            <h2 id="lectures-title">Your Lectures</h2>
             <div className="linkSlider">
             { 
                 data.map((links) => (
