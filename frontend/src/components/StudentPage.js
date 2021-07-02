@@ -39,7 +39,7 @@ const StudentPage = () => {
 
     return (
         <div style={styles.header}>
-            <h2>Here are all your lessons</h2>
+            <h2 id="lectures-title">Here are all your lessons</h2>
             <div className="linkSlider">
             { 
                 data.map((links) => (

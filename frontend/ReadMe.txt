@@ -5,7 +5,7 @@ you need to install
  3.react-router-dom
 -----------------------
 <<--Status-->>
-> All pages are made using reactjs and styling done using javascript
+> All pages are made using reactjs and styling done using css/javascript
 
 > I have not implemented form validation and there are issues with databinding
 
