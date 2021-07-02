@@ -25,7 +25,7 @@ const Header = (props) => {
     return (
         <div style={styles.header}>
             <div style={styles.content}>
-            <div className="front" style={{position:'relative',top:'60px'}}>
+            <div className="front" style={{position:'relative',top:'1px'}}>
             <br/><br/><br/><br/><br/>
             <h1 style = {{color:props.color, fontSize: props.fontSize, fontFamily:props.fontFamily}}>Welcome to CWC</h1>
             <h3 style={{fontFamily:'Arial'}}>ONLINE LEARNING PLATFORM</h3><br/><br/>
