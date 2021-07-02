@@ -22,7 +22,7 @@ h2 {
     margin: auto;
     text-align: center;
     padding: 70px 0px 0px 0px;
-    font-size: 80px;
+    font-size: 50px;
 }
 
 label {
@@ -133,7 +133,7 @@ textarea {
 
 .linkSlider {
     width: 60%;
-    height: 100vh;
+    height: 50px;
     margin: auto;
     border-radius: 30px;
     background-color: white;
